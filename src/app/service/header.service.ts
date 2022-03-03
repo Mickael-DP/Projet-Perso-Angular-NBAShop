@@ -6,14 +6,14 @@ import { Header } from '../models/header.model';
 })
 
 export class HeaderService {
-  header: Header[] = [
+  header: Header =
     new Header(
       "NBA StoreFR",
       "https://www.finder.com/global/images/providers/nbastore-transparent-logo-232x140px.png",
-    ),
-  ];
+    )
+  ;
 
-  getAllHeader(): Header[] {
+  getHeader(): Header {
     return this.header;
   }
 

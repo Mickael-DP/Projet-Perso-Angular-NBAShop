@@ -8,11 +8,11 @@ import {Header} from "./models/header.model";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  header!: Header[];
+  header!: Header;
 
   constructor(private headerService: HeaderService) { }
   ngOnInit() {
-    this.header = this.headerService.getAllHeader();
+    this.header = this.headerService.getHeader();
   }
 
   }

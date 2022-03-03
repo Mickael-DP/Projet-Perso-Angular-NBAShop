@@ -8,7 +8,7 @@ import {HeaderService} from "../service/header.service";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() myHeader!: Header;
+  @Input() header!: Header;
 
   constructor(private headerService: HeaderService) { }
 
