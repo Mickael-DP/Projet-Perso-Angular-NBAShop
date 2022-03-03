@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {Header} from "../models/header.model";
-import {HeaderService} from "../service/header.service";
+import {HeaderService} from "../services/header.service";
 
 @Component({
   selector: 'app-header',
