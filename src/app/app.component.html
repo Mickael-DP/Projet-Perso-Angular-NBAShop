@@ -1,4 +1,10 @@
+<header class="header">
+  <app-header [header]="header"></app-header>
+</header>
 
-  <app-header [header]="header" ></app-header>
-  <app-product-card *ngFor="let product of (products | sortByDate:'asc')" [myProduct]="product">
-  </app-product-card>
+<div class="products">
+  <app-product-card *ngFor="let product of products | sortByDate: 'asc'" [myProduct]="product"> </app-product-card>
+</div>
+<footer class="footer">
+  <app-footer [footer]="footer"></app-footer>
+</footer>

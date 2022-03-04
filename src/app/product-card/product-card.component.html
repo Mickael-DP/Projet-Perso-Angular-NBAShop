@@ -1,9 +1,9 @@
 <div class="root">
   <h2>{{myProduct.title | uppercase}}</h2>
   <img [src]="myProduct.imageUrl" width="200" />
-  <p>{{myProduct.description}}</p>
-  <p *ngIf="myProduct.size && myProduct.size.length > 1">Plusieurs tailles disponibles</p>
   <div class="price-likes">
+    <p>{{myProduct.description}}</p>
+    <p *ngIf="myProduct.size && myProduct.size.length > 1">Plusieurs tailles disponibles</p>
     <b>{{(myProduct.price / 100) | number | currency:'EUR': true : '1.1' }} </b>
     <p>
       <b [ngStyle]="{ color: myProduct.likes > 0 ? 'green' : 'red' }">{{myProduct.likes}} ♥ </b>
@@ -12,3 +12,5 @@
   </div>
   <div>Date : {{myProduct.createdDate | date:'fullDate'}}</div>
 </div>
+
+
