@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductCardComponent} from "./product-card/product-card.component";
 import {SortByDatePipe} from './pipes/product.pipe'
 import {HeaderComponent} from "./header/header.component";
+import { FooterComponent } from './footer/footer.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -13,7 +14,8 @@ registerLocaleData(localeFr);
     AppComponent,
     ProductCardComponent,
     SortByDatePipe,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
