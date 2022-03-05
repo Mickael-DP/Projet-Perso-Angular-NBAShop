@@ -1,16 +1,23 @@
-<div class="root">
-  <h2>{{myProduct.title | uppercase}}</h2>
-  <img [src]="myProduct.imageUrl" width="200" />
-  <div class="price-likes">
-    <p>{{myProduct.description}}</p>
-    <p *ngIf="myProduct.size && myProduct.size.length > 1">Plusieurs tailles disponibles</p>
-    <b>{{(myProduct.price / 100) | number | currency:'EUR': true : '1.1' }} </b>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ myProduct.title | uppercase }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="image-prod" [src]="myProduct.imageUrl" />
+  <mat-card-content>
     <p>
-      <b [ngStyle]="{ color: myProduct.likes > 0 ? 'green' : 'red' }">{{myProduct.likes}} ♥ </b>
-      <button (click)="onLike()">{{myProduct.isLiked ? 'unlike' : 'like'}}</button>
+      {{ myProduct.description }}
     </p>
-  </div>
-  <div>Date : {{myProduct.createdDate | date:'fullDate'}}</div>
-</div>
-
-
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="card-footer">
+      <p *ngIf="myProduct.size && myProduct.size.length > 1">Plusieurs tailles disponibles</p>
+      <b>{{ myProduct.price / 100 | number | currency: 'EUR':true:'1.1' }} </b>
+      <p>
+        <button  (click)="onLike()">
+          <b [ngStyle]="{ color: myProduct.likes > 0 ? 'green' : 'red' }">{{ myProduct.likes }} ♥ </b>
+        </button>
+      </p>
+    </div>
+    <div>{{ myProduct.createdDate | date: 'fullDate' }}</div>
+  </mat-card-actions>
+</mat-card>

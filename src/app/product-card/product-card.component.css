@@ -1,20 +1,20 @@
-.root {
+.image-prod {
+  width: 200px;
   margin: auto;
-  width: 80%;
+  padding: 15px;
+}
+.example-card {
+  margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  padding: 2px;
 }
-.root:hover{
+
+.example-card:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-img {
-  width: 50%;
-  display: flex;
-  margin: auto;
-}
-.price-likes {
+
+.card-footer {
   display: flex;
   justify-content: space-between;
-  padding: 2px 16px;
+  align-items: center;
 }

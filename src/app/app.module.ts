@@ -7,6 +7,8 @@ import { ProductCardComponent} from "./product-card/product-card.component";
 import {SortByDatePipe} from './pipes/product.pipe'
 import {HeaderComponent} from "./header/header.component";
 import  {FooterComponent} from "./footer/footer.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
 
 registerLocaleData(localeFr);
 
@@ -18,9 +20,11 @@ registerLocaleData(localeFr);
     HeaderComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatCardModule
+    ],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'fr-FR' // 'de-DE' for Germany, 'fr-FR' for France ...
