@@ -9,10 +9,10 @@ import {HeaderComponent} from "./header/header.component";
 import  {FooterComponent} from "./footer/footer.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
-import { SearchComponent } from './search/search.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FilterByNamePipe} from "./pipes/filterByName.pipe";
+import {FormsModule} from "@angular/forms";
 
 registerLocaleData(localeFr);
 
@@ -23,11 +23,11 @@ registerLocaleData(localeFr);
     SortByDatePipe,
     FilterByNamePipe,
     HeaderComponent,
-    FooterComponent,
-    SearchComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
