@@ -2,12 +2,16 @@
   <app-header [header]="header"></app-header>
 </header>
 <div class="search">
-  <app-search></app-search>
+  <mat-form-field  class="searchbar" appearance="fill">
+    <mat-label>Recherche</mat-label>
+    <input matInput  placeholder="Produit" [(ngModel)]="search"/>
+  </mat-form-field>
 </div>
 
 <div class="products">
-  <app-product-card *ngFor="let product of products | sortByDate: 'asc'" [myProduct]="product"> </app-product-card>
+  <app-product-card *ngFor="let product of (products | sortByDate:'asc' | filterByName:search)" [myProduct]="product"></app-product-card>
 </div>
+
 <footer class="footer">
   <app-footer [footer]="footer"></app-footer>
 </footer>

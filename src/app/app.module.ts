@@ -12,6 +12,7 @@ import {MatCardModule} from "@angular/material/card";
 import { SearchComponent } from './search/search.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {FilterByNamePipe} from "./pipes/filterByName.pipe";
 
 registerLocaleData(localeFr);
 
@@ -20,6 +21,7 @@ registerLocaleData(localeFr);
     AppComponent,
     ProductCardComponent,
     SortByDatePipe,
+    FilterByNamePipe,
     HeaderComponent,
     FooterComponent,
     SearchComponent
@@ -38,7 +40,8 @@ registerLocaleData(localeFr);
   ],
   bootstrap: [AppComponent],
   exports: [
-    SortByDatePipe
+    SortByDatePipe,
+    FilterByNamePipe
   ]
 })
 export class AppModule { }
