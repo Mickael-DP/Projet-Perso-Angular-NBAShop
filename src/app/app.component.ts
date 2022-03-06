@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   header!: Header;
   footer!: Footer;
   products!: Product[];
+  search: string = '';
+  title: string = '';
 
   constructor(
     private headerService: HeaderService,
@@ -24,7 +26,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.header = this.headerService.getHeader();
     this.products = this.productsService.getAllProducts();
-    this.footer = this.footerService.getFooter();
+    this.footer = this.footerService.getFooter()
   }
 
   }

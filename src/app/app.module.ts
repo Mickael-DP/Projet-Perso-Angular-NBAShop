@@ -9,6 +9,9 @@ import {HeaderComponent} from "./header/header.component";
 import  {FooterComponent} from "./footer/footer.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
+import { SearchComponent } from './search/search.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 registerLocaleData(localeFr);
 
@@ -18,13 +21,16 @@ registerLocaleData(localeFr);
     ProductCardComponent,
     SortByDatePipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatCardModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'fr-FR' // 'de-DE' for Germany, 'fr-FR' for France ...

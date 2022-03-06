@@ -1,6 +1,9 @@
 <header class="header">
   <app-header [header]="header"></app-header>
 </header>
+<div class="search">
+  <app-search></app-search>
+</div>
 
 <div class="products">
   <app-product-card *ngFor="let product of products | sortByDate: 'asc'" [myProduct]="product"> </app-product-card>
