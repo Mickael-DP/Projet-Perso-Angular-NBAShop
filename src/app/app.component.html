@@ -2,16 +2,33 @@
   <app-header [header]="header"></app-header>
 </header>
 <div class="search">
-  <mat-form-field  class="searchbar" appearance="fill">
+  <mat-form-field class="searchbar" appearance="fill">
     <mat-label>Recherche</mat-label>
-    <input matInput  placeholder="Produit"  [(ngModel)]="search"/>
+    <input matInput placeholder="Produit" [(ngModel)]="search" />
   </mat-form-field>
 </div>
 
-<div class="products">
-  <app-product-card *ngFor="let product of (products | sortByDate:'asc' | filterByName:search)" [myProduct]="product"></app-product-card>
+<div>
+  Trier par :
+  <select [(ngModel)]="order">
+    <option value="asc">Ancien</option>
+    <option value="dsc">Récent</option>
+    <option value="A-Z">A-Z</option>
+    <option value="Z-A">Z-A</option>
+  </select>
 </div>
 
+<div class="products">
+  <div class="position-card" *ngIf="order === 'asc' || order === 'dsc'">
+    <app-product-card *ngFor="let product of products | sortByDate: order | filterByName: search" [myProduct]="product"></app-product-card>
+  </div>
+  <div class="position-card" *ngIf="order === 'A-Z' || order === 'Z-A'">
+    <app-product-card *ngFor="let product of products | sortByName: order | filterByName: search" [myProduct]="product"></app-product-card>
+  </div>
+  <div class="position-card" *ngIf="order === ''">
+    <app-product-card *ngFor="let product of products | filterByName: search" [myProduct]="product"></app-product-card>
+  </div>
+</div>
 <footer class="footer">
   <app-footer [footer]="footer"></app-footer>
 </footer>

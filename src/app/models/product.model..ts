@@ -7,6 +7,6 @@ export class Product {
     public likes: number,
     public isLiked: boolean,
     public createdDate: Date,
-    public size?: string[]) {
-  }
+    public size?: Array<string>,
+    ) {}
 }

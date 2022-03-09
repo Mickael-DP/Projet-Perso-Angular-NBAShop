@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   footer!: Footer;
   products!: Product[];
   search: string = '';
+  order: string ='';
 
   constructor(
     private headerService: HeaderService,

@@ -13,6 +13,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FilterByNamePipe} from "./pipes/filterByName.pipe";
 import {FormsModule} from "@angular/forms";
+import {SortByNamePipe} from "./pipes/sortByName.pipe";
 
 registerLocaleData(localeFr);
 
@@ -23,7 +24,8 @@ registerLocaleData(localeFr);
     SortByDatePipe,
     FilterByNamePipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SortByNamePipe
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ registerLocaleData(localeFr);
   bootstrap: [AppComponent],
   exports: [
     SortByDatePipe,
-    FilterByNamePipe
+    FilterByNamePipe,
+    SortByNamePipe
   ]
 })
 export class AppModule { }

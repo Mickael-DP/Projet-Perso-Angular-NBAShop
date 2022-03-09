@@ -1,6 +1,6 @@
 export class Footer {
   constructor(
     public title: string,
-    public paragraph: string ) {
-  }
+    public paragraph: string
+  ) {}
 }
