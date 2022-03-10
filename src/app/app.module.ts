@@ -14,6 +14,9 @@ import {MatInputModule} from "@angular/material/input";
 import {FilterByNamePipe} from "./pipes/filterByName.pipe";
 import {FormsModule} from "@angular/forms";
 import {SortByNamePipe} from "./pipes/sortByName.pipe";
+import { ProductListComponent } from './product-list/product-list.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 registerLocaleData(localeFr);
 
@@ -25,7 +28,9 @@ registerLocaleData(localeFr);
     FilterByNamePipe,
     HeaderComponent,
     FooterComponent,
-    SortByNamePipe
+    SortByNamePipe,
+    ProductListComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ registerLocaleData(localeFr);
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AppRoutingModule
   ],
   providers: [{
     provide: LOCALE_ID,
