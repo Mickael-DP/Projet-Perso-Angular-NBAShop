@@ -7,6 +7,7 @@ import { Product } from '../models/product.model.';
 export class ProductsService {
   products: Product[] = [
     new Product(
+      1,
       'Grizzlies - Maillot NBA',
       'Maillot NBA Ja Morant pour homme',
       'https://cdn1.basket4ballers.com/126176-thickbox_default/maillot-nba-ja-morant-memphis-grizzlies-nike-icon-edition-cw3670-419.jpg\n',
@@ -17,6 +18,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      2,
       'Lakers - Maillot NBA',
       'Maillot NBA Lebron James pour homme',
       'https://cdn2.basket4ballers.com/127296-thickbox_default/maillot-nba-lebron-james-los-angeles-lakers-statement-edition-2020-cv9481-513.jpg\n',
@@ -27,6 +29,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      3,
       'Nets - Maillot NBA',
       'Maillot NBA Kyrie Irving pour homme',
       'https://cdn2.basket4ballers.com/132831-thickbox_default/maillot-bkn-mnk-df-swgmn-jsy-mmt-21-blue-void-white-irving-kyrie-nba-db4018-400.jpg',
@@ -37,6 +40,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      4,
       'Bulls - Maillot NBA',
       'Maillot NBA Zach Lavine pour homme',
       'https://cdn2.basket4ballers.com/135236-thickbox_default/maillot-nba-zach-lavine-chicago-bulls-nike-city-edition-mixtape-db4021-657.jpg',
@@ -47,6 +51,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      5,
       'Warriors - Maillot NBA',
       'Maillot NBA Stephen Curry pour homme',
       'https://cdn1.basket4ballers.com/135418-thickbox_default/maillot-nba-stephen-curry-golden-state-warriors-nike-city-edition-mixtape-db4027-010.jpg',
@@ -57,6 +62,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      6,
       'Mavericks - Maillot NBA',
       'Maillot NBA Luka Doncic pour homme',
       'https://cdn2.basket4ballers.com/132826-thickbox_default/maillot-nba-luka-doncic-dallas-mavericks-nike-city-edition-mixtape-swingman.jpg\n',
@@ -67,6 +73,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      7,
       '76ers - Maillot NBA',
       'Maillot NBA Ben Simmons pour homme',
       'https://cdn2.basket4ballers.com/97941-thickbox_default/maillot-ben-simmons-76ers-icon-edition-2020-rush-blue-white-simmons-ben-nba-cw3678-498.jpg',
@@ -77,6 +84,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      8,
       'Bucks - Maillot NBA',
       'Maillot NBA G.Antetokoumpo pour homme',
       'https://cdn1.basket4ballers.com/97545-thickbox_default/maillot-giannis-antetokounmpo-bucks-icon-edition-2020-fir-flat-opal-antetokounmpo-g-nba-cw3672-329.jpg',
@@ -87,6 +95,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      9,
       'Hornets - Maillot NBA',
       'Maillot NBA Lamelo Ball pour homme',
       'https://cdn2.basket4ballers.com/138328-large_default/maillot-nba-lamelo-ball-charlotte-hornets-jordan-icon-edition-swingman.jpg',
@@ -97,6 +106,7 @@ export class ProductsService {
       ['S', 'M', 'L', 'XL'],
     ),
     new Product(
+      10,
       'Heat - Maillot NBA',
       'Maillot NBA Jimmy Butler pour homme',
       'https://cdn1.basket4ballers.com/133924-thickbox_default/maillot-nba-jimmy-butler-miami-heat-nike-city-edition-mixtape-swingman.jpg',
@@ -110,6 +120,10 @@ export class ProductsService {
 
   getAllProducts(): Product[] {
     return this.products;
+  }
+
+  getOneProduct(id: number): Product {
+    return <Product>this.products.find((p) => p.id === id)
   }
 
   onLikeProduct(product: Product): void {
