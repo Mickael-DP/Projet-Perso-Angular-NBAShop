@@ -4,3 +4,23 @@
 .logo {
   width: 120px;
 }
+.home {
+  margin-right: 10px;
+}
+
+.menu-nav {
+  display: flex;
+  align-items: center;
+
+}
+a {
+  color: black;
+}
+.is-active {
+  color: white;
+}
+
+
+.txt-deco{
+  text-decoration: none;
+}

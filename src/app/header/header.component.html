@@ -1,2 +1,6 @@
 <img class="logo" [src]="header.imageUrl" />
 <h2 class="header-title">{{ header.title }}</h2>
+<div class="menu-nav">
+  <a  class="txt-deco home" routerLink=""  routerLinkActive="is-active" [routerLinkActiveOptions]= "{exact: true}">Home</a>
+  <a class="txt-deco" routerLink= "about" routerLinkActive="is-active">About</a>
+</div>

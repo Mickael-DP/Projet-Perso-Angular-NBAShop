@@ -9,13 +9,18 @@ app-header {
   justify-content: space-between;
   align-items: center;
 }
-.footer {
-  margin: 0;
-  padding: 15px;
-  background: dodgerblue;
-}
+
 app-footer {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer{
+  background: dodgerblue;
 }

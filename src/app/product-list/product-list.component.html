@@ -15,12 +15,18 @@
 </div>
 <div class="products">
   <div class="position-card" *ngIf="order === 'asc' || order === 'dsc'">
-    <app-product-card *ngFor="let product of products | sortByDate: order | filterByName: search" [myProduct]="product"></app-product-card>
+    <a *ngFor="let product of products | sortByDate: order | filterByName: search" [routerLink]="['product', product.id]">
+      <app-product-card [myProduct]="product"></app-product-card>
+    </a>
   </div>
   <div class="position-card" *ngIf="order === 'A-Z' || order === 'Z-A'">
-    <app-product-card *ngFor="let product of products | sortByName: order | filterByName: search" [myProduct]="product"></app-product-card>
+    <a  *ngFor="let product of products | sortByName: order | filterByName: search" [routerLink]="['product', product.id]">
+      <app-product-card [myProduct]="product"></app-product-card>
+    </a>
   </div>
   <div class="position-card" *ngIf="order === ''">
-    <app-product-card *ngFor="let product of products | filterByName: search" [myProduct]="product"></app-product-card>
+    <a *ngFor="let product of products | filterByName: search" [routerLink]="['product', product.id]" class="txt-deco" >
+      <app-product-card  [myProduct]="product"></app-product-card>
+    </a>
   </div>
 </div>

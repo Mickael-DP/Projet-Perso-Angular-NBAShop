@@ -17,6 +17,7 @@ import {SortByNamePipe} from "./pipes/sortByName.pipe";
 import { ProductListComponent } from './product-list/product-list.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(localeFr);
 
@@ -30,7 +31,8 @@ registerLocaleData(localeFr);
     FooterComponent,
     SortByNamePipe,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
